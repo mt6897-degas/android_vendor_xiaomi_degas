@@ -929,7 +929,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/degas/proprietary/vendor/etc/camera/mt6897/gma_custom.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mt6897/gma_custom.txt \
     vendor/xiaomi/degas/proprietary/vendor/etc/camera/mt6985/gma_custom.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mt6985/gma_custom.txt \
     vendor/xiaomi/degas/proprietary/vendor/etc/camera/mt6989/gma_custom.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mt6989/gma_custom.txt \
-    vendor/xiaomi/degas/proprietary/vendor/etc/displayconfig/display_id_4627039422300187648.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4627039422300187648.xml \
     vendor/xiaomi/degas/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
     vendor/xiaomi/degas/proprietary/vendor/etc/ecc_list_preference.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_preference.xml \
     vendor/xiaomi/degas/proprietary/vendor/etc/elliptic_sensor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/elliptic_sensor.xml \
