@@ -929,7 +929,6 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/degas/proprietary/vendor/etc/camera/mt6897/gma_custom.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mt6897/gma_custom.txt \
     vendor/xiaomi/degas/proprietary/vendor/etc/camera/mt6985/gma_custom.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mt6985/gma_custom.txt \
     vendor/xiaomi/degas/proprietary/vendor/etc/camera/mt6989/gma_custom.txt:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mt6989/gma_custom.txt \
-    vendor/xiaomi/degas/proprietary/vendor/etc/displayconfig/display_id_4627039422300187648.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4627039422300187648.xml \
     vendor/xiaomi/degas/proprietary/vendor/etc/ecc_list.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list.xml \
     vendor/xiaomi/degas/proprietary/vendor/etc/ecc_list_preference.xml:$(TARGET_COPY_OUT_VENDOR)/etc/ecc_list_preference.xml \
     vendor/xiaomi/degas/proprietary/vendor/etc/elliptic_sensor.xml:$(TARGET_COPY_OUT_VENDOR)/etc/elliptic_sensor.xml \
@@ -999,6 +998,7 @@ PRODUCT_COPY_FILES += \
     vendor/xiaomi/degas/proprietary/vendor/etc/init/vendor.mediatek.hardware.nvram-sevice.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.nvram-sevice.rc \
     vendor/xiaomi/degas/proprietary/vendor/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.mediatek.hardware.pq_aidl-service.rc \
     vendor/xiaomi/degas/proprietary/vendor/etc/init/vendor.xiaomi.hardware.displayfeature_aidl-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.displayfeature_aidl-service.rc \
+    vendor/xiaomi/degas/proprietary/vendor/etc/init/vendor.xiaomi.hardware.misys.core-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.misys.core-service.rc \
     vendor/xiaomi/degas/proprietary/vendor/etc/init/volte_clientapi_ua.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/volte_clientapi_ua.rc \
     vendor/xiaomi/degas/proprietary/vendor/etc/mali_platform.config:$(TARGET_COPY_OUT_VENDOR)/etc/mali_platform.config \
     vendor/xiaomi/degas/proprietary/vendor/etc/mpe.conf:$(TARGET_COPY_OUT_VENDOR)/etc/mpe.conf \
@@ -1953,7 +1953,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     APUWareApusysAidlServer \
     APUWareUtilsAidlServer \
-    android.hardware.security.keymint-V3-ndk-v34 \
+    android.frameworks.displayservice@1.0 \
+    android.hardware.audio@7.1-util-v34 \
     libzslselectorpool \
     libGLES_meow \
     libMEOW_data \
@@ -2026,6 +2027,7 @@ PRODUCT_PACKAGES += \
     libapusys \
     libarmnn \
     libarmnn_ndk.mtk.vndk \
+    libaudio_aidl_conversion_common_ndk-v34 \
     libaudio_param_parser-vnd \
     libaudiocloudctrl \
     libaudiocompensationfilter_vendor \
@@ -2058,6 +2060,7 @@ PRODUCT_PACKAGES += \
     libcamalgo.utility \
     libcamalgo.vsdofUtil \
     libcamalgo.warp \
+    libcamera2ndk_vendor-v34 \
     libcameraloadcalibrationfiles \
     libcameraopt-vendor \
     libcameraplatforminfoxiaomi \
@@ -2068,13 +2071,19 @@ PRODUCT_PACKAGES += \
     libcmdl \
     libcmdl_ndk.mtk.vndk \
     libcodec2_fsr \
+    libcodec2_hidl@1.0-v34 \
+    libcodec2_hidl@1.1-v34 \
+    libcodec2_hidl@1.2-v34 \
+    libcodec2_hidl_plugin-v34 \
     libcodec2_mtk_c2store \
     libcodec2_mtk_vdec \
     libcodec2_mtk_venc \
+    libcodec2_soft_common-v34 \
     libcodec2_soft_mtk_alacdec \
     libcodec2_soft_mtk_imaadpcmdec \
     libcodec2_soft_mtk_mp3dec \
     libcodec2_soft_mtk_msadpcmdec \
+    libcodec2_vndk-v34 \
     libcodec2_vpp_fa_plugin \
     libcodec2_vpp_frc_plugin \
     libcodec2_vpp_qt_plugin \
@@ -2087,6 +2096,7 @@ PRODUCT_PACKAGES += \
     libcom.xiaomi.grallocutils \
     libcom.xiaomi.hwadapter.decoupleutil-vendor \
     libcom.xiaomi.hwadapter.postprocinterface-vendor \
+    libcom.xiaomi.ionutils \
     libcom.xiaomi.metadatautils \
     libcom.xiaomi.mivihal.cpupolicy \
     libcom.xiaomi.pluginutils \
@@ -2094,6 +2104,7 @@ PRODUCT_PACKAGES += \
     libcom.xiaomi.signaltrigger \
     libcomposer_ext \
     libconnfem \
+    libcppcose_rkp-V3 \
     libcustom_nvram \
     libcvsd_mtk \
     libdeflicker \
@@ -2106,7 +2117,7 @@ PRODUCT_PACKAGES += \
     libfeaturepolicy \
     libfgauge_gm30 \
     libfile_op \
-    libformatter \
+    libformatter-v34 \
     libfvaudio \
     libged \
     libgpud \
@@ -2131,6 +2142,8 @@ PRODUCT_PACKAGES += \
     libjpeg-alpha_vendor \
     libjpegdecoder-v34 \
     libjpegencoder-v34 \
+    libkeymint_V3 \
+    libkeymint_remote_prov_support_V3 \
     libksensor \
     libladder \
     libmbrainSDKv \
@@ -2161,6 +2174,7 @@ PRODUCT_PACKAGES += \
     libmisoundparser \
     libmispowerop \
     libmnetlink_v104 \
+    libmnl-v34 \
     libmp3dec_mtk \
     libmsbc_mtk \
     libmtk-fusion-ril-prop-vsim \
@@ -2251,10 +2265,12 @@ PRODUCT_PACKAGES += \
     librilfusion \
     librt_extamp_intf \
     libscltm \
+    libsfplugin_ccodec_utils-v34 \
     libsilkybrightnesscore \
     libsn220u_fw \
     libspeech_enh_lib \
     libspeechparser_vendor \
+    libstagefright_bufferqueue_helper-v36 \
     libstorage_otp \
     libsysenv \
     libteecli \
@@ -2519,7 +2535,6 @@ PRODUCT_PACKAGES += \
     libmmagent \
     libmml \
     libmmlpqImpl \
-    libmnl \
     libmtk_drvb \
     libmtkcam.atmseventmgr \
     libmtkcam.debugwrapper \
@@ -2664,8 +2679,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.apuware.utils@2.0-vendor \
     vendor.mediatek.hardware.audio@8.1 \
     vendor.mediatek.hardware.bluetooth.audio-V1-ndk \
-    vendor.mediatek.hardware.bluetooth.audio@2.1 \
-    vendor.mediatek.hardware.bluetooth.audio@2.2 \
     vendor.mediatek.hardware.camera.aovservice-V3-ndk \
     vendor.mediatek.hardware.camera.atms-V1-ndk \
     vendor.mediatek.hardware.camera.bgservice-V1-ndk \
@@ -2682,7 +2695,6 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.mbrain-V2-ndk-vendor \
     vendor.mediatek.hardware.mmagent-V1-ndk \
     vendor.mediatek.hardware.mmlpq-V3-ndk \
-    vendor.mediatek.hardware.mtkpower-V1-ndk \
     vendor.mediatek.hardware.mtkradioex.assist-V1-ndk \
     vendor.mediatek.hardware.mtkradioex.atci-V1-ndk \
     vendor.mediatek.hardware.mtkradioex.cap-V1-ndk \
@@ -2731,10 +2743,14 @@ PRODUCT_PACKAGES += \
     vendor.xiaomi.hardware.bgservice@1.0-impl \
     vendor.xiaomi.hardware.bgservice@1.0 \
     vendor.xiaomi.hardware.fx.tunnel-V1-ndk \
+    vendor.xiaomi.hardware.misys.common-V3-ndk \
+    vendor.xiaomi.hardware.misys.core-V1-ndk \
     vendor.xiaomi.hardware.mlipay-V1-ndk \
+    vendor.xiaomi.hardware.mtkblackbox-V2-ndk \
     vendor.xiaomi.hardware.quickcamera-V1-ndk_platform \
-    vendor.xiaomi.hw.touchfeature-V1-ndk \
+    vendor.xiaomi.hw.touchfeature-V1-ndk-vendor \
     vendor.xiaomi.sensor.citsensorservice-V1-ndk \
+    xiaomi.system.hypsys.common-V1-ndk \
     vendor.mediatek.hardware.audio-V1-ndk \
     vendor.mediatek.hardware.mbrain-V2-ndk \
     vendor.mediatek.hardware.pq_aidl-V7-ndk \
@@ -3023,8 +3039,10 @@ PRODUCT_PACKAGES += \
     vendor.mediatek.hardware.nvram-service \
     vendor.mediatek.hardware.pq_aidl-service \
     vendor.xiaomi.hardware.displayfeature_aidl-service \
+    vendor.xiaomi.hardware.misys.core-service \
     vendor.xiaomi.hardware.secure_element-service \
     vtservice_aidl \
+    hypsys_vendor \
     init.insmod \
     mi_thermald \
     miteelog \
@@ -3325,7 +3343,6 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libmmagent_so \
     vendor_lib64_libmml_so \
     vendor_lib64_libmmlpqImpl_so \
-    vendor_lib64_libmnl_so \
     vendor_lib64_libmtk_drvb_so \
     vendor_lib64_libmtkcam_atmseventmgr_so \
     vendor_lib64_libmtkcam_debugwrapper_so \
@@ -3463,15 +3480,3 @@ PRODUCT_PACKAGES += \
     vendor_lib64_libpqparamparser_so \
     vendor_lib64_mtk000_mipi_raw_IdxMgr_so \
     vendor_lib64_mtk000_mipi_raw_tuning_so
-
-# MiSys / HypSys vendor AIDL service (Leica Watermark persistence)
-PRODUCT_COPY_FILES += \
-    vendor/xiaomi/degas/proprietary/vendor/etc/init/vendor.xiaomi.hardware.misys.core-service.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/vendor.xiaomi.hardware.misys.core-service.rc
-
-PRODUCT_PACKAGES += \
-    hypsys_vendor \
-    vendor.xiaomi.hardware.misys.core-service \
-    vendor.xiaomi.hardware.misys.common-V3-ndk \
-    vendor.xiaomi.hardware.misys.core-V1-ndk \
-    vendor.xiaomi.hardware.mtkblackbox-V2-ndk \
-    xiaomi.system.hypsys.common-V1-ndk
